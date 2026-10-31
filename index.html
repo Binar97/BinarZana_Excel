@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ckb" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کۆرسی دروستکردنی سیستەم و داتابەیس</title>
+    
+    <!-- Favicon / Logo -->
+    <link rel="icon" type="image/x-icon" href="Images/Binar.ico">
+    
+    <!-- Font Awesome Icons & DevIcons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Language Switcher Bar -->
+        <div class="lang-bar animate-fade">
+            <i class="fa-solid fa-globe"></i>
+            <button class="lang-btn active-ckb" id="btn-ckb" onclick="setLanguage('ckb')">کوردی</button>
+            <button class="lang-btn" id="btn-ara" onclick="setLanguage('ara')">العربية</button>
+            <button class="lang-btn" id="btn-eng" onclick="setLanguage('eng')">English</button>
+        </div>
+
+        <!-- Header / Main Title -->
+        <div class="header animate-up">
+            <div class="logo-wrapper">
+                <img src="Images/Binar.ico" alt="Binar Zana Logo" class="profile-logo" onerror="this.style.display='none'; document.getElementById('fallback-icon').style.display='block';">
+                <i class="fa-solid fa-laptop-code" id="fallback-icon" style="display: none;"></i>
+            </div>
+
+            <h1 id="main-title">بینەر زانا خدر</h1>
+
+            <!-- Floating Glowing Tech Logos Under Name -->
+            <div class="brand-icons-container">
+                <div class="tech-glow-icon excel-glow" title="Microsoft Excel VBA">
+                    <i class="fa-regular fa-file-excel"></i>
+                </div>
+                <div class="tech-glow-icon mysql-glow" title="MySQL Workbench">
+                    <i class="devicon-mysql-plain"></i>
+                </div>
+                <div class="tech-glow-icon csharp-glow" title="C# .NET">
+                    <i class="devicon-csharp-plain"></i>
+                </div>
+            </div>
+
+            <p class="subtitle" id="main-subtitle">کۆرسی پرۆفێشناڵی دروستکردنی سیستەم و داتابەیس لەسفرەوە بۆ سەد</p>
+
+            <div class="tech-tags">
+                <span class="tag"><i class="fa-solid fa-code"></i> VBA Excel</span>
+                <span class="tag"><i class="fa-solid fa-database"></i> MySQL</span>
+                <span class="tag"><i class="fa-solid fa-file-invoice"></i> Reports</span>
+            </div>
+        </div>
+
+        <!-- Special Limited Time Offer Banner -->
+        <div class="offer-card animate-up">
+            <div class="offer-badge" id="offer-badge-text">
+                ⚡ ئۆفەری کاتی
+            </div>
+            
+            <div class="offer-header">
+                <div class="offer-title-group">
+                    <h2 id="offer-main-title">کۆرسی ئاستی باڵای ئێکسڵ</h2>
+                    <p id="offer-main-sub">وەکو ڕاهێنانی بەهاکەی پێشکەش دەکرێت بە شیوازی پڕۆفێشناڵ و کردارەکی</p>
+                </div>
+                <div class="offer-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+            </div>
+
+            <div class="price-box">
+                <div class="price-old-col">
+                    <span class="price-label" id="lbl-old-price">نرخی پێشوو</span>
+                    <span class="old-amount">250,000</span>
+                    <span class="currency-tag">IQD</span>
+                </div>
+                
+                <div class="price-arrow">
+                    <i class="fa-solid fa-arrow-left arrow-icon"></i>
+                </div>
+                
+                <div class="price-new-col">
+                    <span class="price-label" id="lbl-new-price">نرخی ئێستا</span>
+                    <span class="new-amount">99,000</span>
+                    <span class="currency-tag-green" id="lbl-currency">دینار</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Course Access CTA -->
+        <a href="https://binar97.github.io/AllCourseBinarZana/" target="_blank" class="card card-gold animate-up delay-1">
+            <div class="card-icon card-icon-gold">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="card-content">
+                <div class="card-title" id="course-link-title">بەشی بینینی سیستەمەکان</div>
+                <div class="card-subtitle" id="course-link-sub">لەم بەشەدا زانیاری زیاتر و سیستەمەکان دەبینی</div>
+            </div>
+            <div class="card-btn btn-light-red">
+                <i class="fa-solid fa-arrow-left arrow-icon"></i>
+                <span id="btn-text-1">کلیک لێرە بکە</span>
+            </div>
+        </a>
+
+        <!-- Suitable For Section -->
+        <div class="animate-up delay-2">
+            <div class="section-title">
+                <i class="fa-solid fa-users"></i>
+                <span id="sec-suitable-title">گونجاوە بۆ:</span>
+            </div>
+            <div class="grid-list" id="suitable-list">
+                <div class="grid-item"><i class="fa-solid fa-building-columns"></i> کارمەندی بانک</div>
+                <div class="grid-item"><i class="fa-solid fa-building"></i> کارمەندی کۆمپانیا</div>
+                <div class="grid-item"><i class="fa-solid fa-house-user"></i> کارمەندی عەقارات</div>
+                <div class="grid-item"><i class="fa-solid fa-helmet-safety"></i> بەڵێندەرایەتی</div>
+                <div class="grid-item"><i class="fa-solid fa-cart-shopping"></i> کارمەندی فرۆشگا</div>
+                <div class="grid-item"><i class="fa-solid fa-boxes-packing"></i> ڕێکخەری کۆگا</div>
+                <div class="grid-item"><i class="fa-solid fa-calculator"></i> ژمێریار (Accountant)</div>
+                <div class="grid-item"><i class="fa-solid fa-user-tie"></i> بەڕێوەبەری HR</div>
+            </div>
+        </div>
+
+        <!-- What You Will Learn -->
+        <div class="animate-up delay-3">
+            <div class="section-title">
+                <i class="fa-solid fa-bullseye"></i>
+                <span id="sec-learn-title">لە ناو کۆرسەکەدا فێردەبیت:</span>
+            </div>
+            <div class="grid-list" id="learn-list">
+                <div class="grid-item"><i class="fa-solid fa-check-circle"></i> VBA لە ئاستی پڕۆفشناڵ</div>
+                <div class="grid-item"><i class="fa-solid fa-check-circle"></i> دروستکردنی Database</div>
+                <div class="grid-item"><i class="fa-solid fa-check-circle"></i> MySQL Workbench</div>
+                <div class="grid-item"><i class="fa-solid fa-check-circle"></i> C# .NET Development</div>
+                <div class="grid-item"><i class="fa-solid fa-check-circle"></i> UserForm ـە پڕۆفشناڵەکان</div>
+                <div class="grid-item"><i class="fa-solid fa-check-circle"></i> Login System</div>
+                <div class="grid-item"><i class="fa-solid fa-check-circle"></i> Backup & Restore Data</div>
+                <div class="grid-item"><i class="fa-solid fa-check-circle"></i> چاپکردنی Report & Invoice</div>
+            </div>
+        </div>
+
+        <!-- Course Detail Highlight Box -->
+        <div class="feature-box animate-up delay-4" id="feature-description">
+            ✨ شتانێکت فێردەکەین کە ڕۆژێک لە ڕۆژان بیرت نەکردبێتەوە کە ئاستت بگاتە ئەو ئاستە بەرزەی داواکاری کۆمپانیاکان وەربگریت و سیستەمیان بۆ دروست بکەیت بە ئاستێکی تەواو پڕۆفشناڵ.<br><br>
+            🎯 لە کۆرسی ئاستی باڵادا، یانزە سیستەمی داتابەیسی پێشکەوتوو و پڕۆفشناڵ دروست دەکەین لەسفرەوە بۆ سەد.
+        </div>
+
+        <!-- Contact Section -->
+        <div class="animate-up delay-5">
+            <div class="section-title">
+                <i class="fa-solid fa-headset"></i>
+                <span id="sec-contact-title">پەیوەندی بە بەڕێوەبەرەوە:</span>
+            </div>
+            
+            <!-- Telegram -->
+            <a href="https://t.me/binarzanakhdir" target="_blank" class="card card-red" style="margin-bottom: 12px;">
+                <div class="card-icon card-icon-light">
+                    <i class="fa-brands fa-telegram"></i>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Telegram Direct</div>
+                    <div class="card-subtitle">@binarzanakhdir</div>
+                </div>
+                <div class="card-btn btn-white">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span id="btn-text-2">پەیام بنێرە</span>
+                </div>
+            </a>
+
+            <!-- WhatsApp Card -->
+            <div class="card card-whatsapp">
+                <div class="card-icon card-icon-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="card-content">
+                    <div class="card-title" dir="ltr" style="text-align: start;">0771 971 3098</div>
+                    <div class="card-subtitle" id="wa-subtitle">واتسئاپ (نامە و پەیوەندی)</div>
+                </div>
+                <div class="action-buttons">
+                    <a href="https://wa.me/9647719713098" target="_blank" class="card-btn btn-whatsapp-msg">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span id="btn-text-wa-chat">نامە</span>
+                    </a>
+                    <a href="tel:07719713098" class="card-btn btn-whatsapp-call">
+                        <i class="fa-solid fa-phone"></i>
+                        <span id="btn-text-wa-call">پەیوەندی</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer animate-up delay-5">
+            <div id="footer-text">Created for Professional Excel & Database Training 2026 ©</div>
+            <div dir="ltr">0771 971 3098</div>
+        </div>
+
+    </div>
+
+    <!-- External JavaScript Link -->
+    <script src="script.js"></script>
+</body>
+</html>
