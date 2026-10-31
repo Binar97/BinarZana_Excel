@@ -40,7 +40,7 @@ const translations = {
         waSub: 'واتسئاپ (نامە و پەیوەندی)',
         btnWaChat: 'نامە',
         btnWaCall: 'پەیوەندی',
-        footerText: 'Created for Professional Excel & Database Training 2026 ©'
+        footerText: '© ئامادەین بۆ دروستکردنی هەمان شێوازی پلاتفۆڕم بۆ کارەکانت '
     },
     ara: {
         dir: 'rtl',
