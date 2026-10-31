@@ -219,11 +219,11 @@ body {
     line-height: 1.5;
     padding: 0 10px;
 }
-
+/*#121526*/
 /* Offer Card Box Design */
 .offer-card {
     position: relative;
-    background: #121526;
+    background: #4e3f50;  
     border: 2px solid #ff4747;
     border-radius: 28px;
     padding: 24px 18px 18px 18px;
