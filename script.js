@@ -306,3 +306,58 @@ function setLanguage(lang) {
 document.addEventListener('DOMContentLoaded', () => {
     setLanguage('ckb');
 });
+
+
+
+
+/* 🌟 تەڵخبونی سەرەتایی (Initial Blur) و ڕوونبوونەوەی هێمن لەگەڵ سکرۆڵ بۆ سەرەوە */
+window.addEventListener('load', () => {
+    // دیاریکردنی بەشی سەرەکی وێبسایتەکە یان هەموو بادییەکە بۆ تەڵخکردن
+    const mainContent = document.body;
+    
+    // لە سەرەتادا تەڵخبوون و کاڵی (Blur & Opacity) دەخەینە سەر وێبسایتەکە
+    if (mainContent) {
+        mainContent.style.transition = 'filter 1.5s ease, opacity 1.5s ease';
+        mainContent.style.filter = 'blur(6px)';
+        mainContent.style.opacity = '0.7';
+    }
+
+    // دەستبەجێ دەچێتە خوارەوە بۆ سەر بەشی ئۆفەر
+    window.scrollTo({
+        top: 450,
+        behavior: 'instant'
+    });
+
+    // دوای ١ چرکە، دەست دەکات بە گەڕانەوە بۆ سەرەوە و لە هەمان کاتدا وێبسایتەکە ڕوون دەبێتەوە
+    setTimeout(() => {
+        if (mainContent) {
+            mainContent.style.filter = 'blur(0px)';
+            mainContent.style.opacity = '1';
+        }
+
+        const targetPosition = 0;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        let duration = 1800; // ماوەی هاتنەوە سەرەوە (١.٨ چرکە)
+        let startTime = null;
+
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            let timeElapsed = currentTime - startTime;
+            let run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) {
+                requestAnimationFrame(animation);
+            }
+        }
+
+        function easeInOutQuad(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
+    }, 1000);
+});
