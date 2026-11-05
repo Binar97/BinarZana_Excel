@@ -4,7 +4,7 @@ const translations = {
         mainTitle: 'بینەر زانا خدر',
         eduTitle: 'بڕوانامە و شارەزاییەکان',
         badges: [
-            '<i class="fa-solid fa-graduation-cap" style="color: #7c3aed; background: #f3e8ff;"></i> <span>دەرچووی بەڕێوەبردنی کارگێڕی</span>',
+            '<i class="fa-solid fa-graduation-cap" style="color: #7c3aed; background: #f3e8ff;"></i> <span>دەرچووی کارگــێڕی کار</span>',
             '<i class="fa-solid fa-users-gear" style="color: #9333ea; background: #fae8ff;"></i> <span>سەرچاوە مرۆییەکان (HR)</span>',
             '<i class="fa-solid fa-coins" style="color: #d97706; background: #fef3c7;"></i> <span>ژمێریاری (Accounting)</span>',
             '<i class="fa-solid fa-laptop-code" style="color: #0284c7; background: #e0f2fe;"></i> <span>پەرەپێدەری داتابەیس و IT</span>',
@@ -407,4 +407,73 @@ window.addEventListener('load', () => {
 
         requestAnimationFrame(animation);
     }, 1000);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// دەقەکانی تایپڕای تەر بە پێی زمانەکان
+const typewriterTexts = {
+    ckb: "تکایە کلیک لە هەر ئایکۆنێکی خوارەوە بکە بۆ پەیوەندیکردن بە منەوە",
+    ara: "انقر على أي من الأيقونات أدناه للتواصل معي",
+    eng: "Click any icon below to connect with me"
+};
+
+let twIndex = 0;
+let isDeleting = false;
+let twTimeout = null;
+
+function runTypewriter() {
+    const textEl = document.getElementById('typewriter-text');
+    if (!textEl) return;
+
+    // وەرگرتنی دەق بە پێی زمانی هەڵبژێردراوی ئێستا
+    const fullText = typewriterTexts[currentLang] || typewriterTexts['ckb'];
+
+    if (isDeleting) {
+        twIndex--;
+    } else {
+        twIndex++;
+    }
+
+    textEl.innerText = fullText.substring(0, twIndex);
+
+    // دیاریکردنی خێرایی نووسین و سڕینەوە
+    let speed = isDeleting ? 40 : 80;
+
+    // کاتێک دەقەکە بە تەواوی نووسرا
+    if (!isDeleting && twIndex === fullText.length) {
+        speed = 2500; // ٢.٥ چرکە دەوەستێت پاشان دەست بە سڕینەوە دەکات
+        isDeleting = true;
+    } 
+    // کاتێک دەقەکە بە تەواوی سڕایەوە
+    else if (isDeleting && twIndex === 0) {
+        isDeleting = false;
+        speed = 500; // نیو چرکە دەوەستێت پاشان دەست بە نووسینەوە دەکات
+    }
+
+    twTimeout = setTimeout(runTypewriter, speed);
+}
+
+// هەروەها ئەم دێڕە زیاد بکە بۆ ناو فەنکشنی setLanguage(lang) تا کاتێک زمانەکە گۆڕدرا ڕاستەخۆ سڕینەوە و نووسینەوەکە بە زمانی نوێ دەستپێبکاتەوە:
+/*
+    clearTimeout(twTimeout);
+    twIndex = 0;
+    isDeleting = false;
+    runTypewriter();
+*/
+
+// دەستپێکردنی تایتپڕای تەر کاتێک لاپەڕەکە بار دەبێت
+document.addEventListener('DOMContentLoaded', () => {
+    runTypewriter();
 });
