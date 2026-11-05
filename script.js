@@ -2,6 +2,15 @@ const translations = {
     ckb: {
         dir: 'rtl',
         mainTitle: 'بینەر زانا خدر',
+        eduTitle: 'بڕوانامە و شارەزاییەکان',
+        badges: [
+            '<i class="fa-solid fa-graduation-cap"></i> دەرچووی بەڕێوەبردنی کارگێڕی',
+            '<i class="fa-solid fa-users-gear"></i> سەرچاوە مرۆییەکان (HR)',
+            '<i class="fa-solid fa-coins"></i> ژمێریاری (Accounting)',
+            '<i class="fa-solid fa-laptop-code"></i> پەرەپێدەری داتابەیس و IT',
+            '<i class="fa-solid fa-palette"></i> گرافیک دیزاینەر',
+            '<i class="fa-solid fa-language"></i> وەرگێڕ (Translator)'
+        ],
         voiceLabel: 'تەواوی زانیاریی کۆرسەکە',
         mainSubtitle: 'کۆرسی پرۆفێشناڵی دروستکردنی سیستەم و داتابەیس بە ئێکسڵ',
         offerBadge: '⚡ ئۆفەری کاتی',
@@ -46,6 +55,15 @@ const translations = {
     ara: {
         dir: 'rtl',
         mainTitle: 'بينر زانا خدر',
+        eduTitle: 'التعليم والمهارات',
+        badges: [
+            '<i class="fa-solid fa-graduation-cap"></i> خريج إدارة أعمال',
+            '<i class="fa-solid fa-users-gear"></i> الموارد البشرية (HR)',
+            '<i class="fa-solid fa-coins"></i> المحاسبة (Accounting)',
+            '<i class="fa-solid fa-laptop-code"></i> مطور قواعد بيانات وتقنية معلومات',
+            '<i class="fa-solid fa-palette"></i> مصمم جرافيك',
+            '<i class="fa-solid fa-language"></i> مترجم (Translator)'
+        ],
         voiceLabel: 'كافة تفاصيل الدورة التدريبية',
         mainSubtitle: 'الدورة الاحترافية لبناء الأنظمة وقواعد البيانات من الصفر حتى الاحتراف',
         offerBadge: '⚡ عرض لفترة محدودة',
@@ -90,6 +108,15 @@ const translations = {
     eng: {
         dir: 'ltr',
         mainTitle: 'Binar Zana Khdir',
+        eduTitle: 'Education & Skills',
+        badges: [
+            '<i class="fa-solid fa-graduation-cap"></i> Business Administration Graduate',
+            '<i class="fa-solid fa-users-gear"></i> Human Resources (HR)',
+            '<i class="fa-solid fa-coins"></i> Accounting',
+            '<i class="fa-solid fa-laptop-code"></i> IT & Database Systems Developer',
+            '<i class="fa-solid fa-palette"></i> Graphic Designer',
+            '<i class="fa-solid fa-language"></i> Translator'
+        ],
         voiceLabel: 'Full Course Information',
         mainSubtitle: 'Professional System & Database Development Course (Zero to Hero)',
         offerBadge: '⚡ Limited Time Offer',
@@ -133,21 +160,21 @@ const translations = {
     }
 };
 
-// --- Subtitles Timing Engine ---
+// --- Subtitles Timing Engine (دەقە فەرمییەکانتان بەبێ هیچ دەستکارییەک) ---
 const subtitlesData = [
     { time: 0, text: " بەڕێزم سڵاوت لێ بێت تەندروستی بەڕێزت چۆنە؟" },
     { time: 3, text: " لە کۆرسی ئاستی باڵای Excel دا یانزە سیستەمی داتابەیسی پێشکەوتوو و پڕۆفێشناڵ دروست دەکەین" },
     { time: 8, text: "🚀 🎓 ئەم کۆرسە بۆ کەسێکە کە بیەوێت عەرزی تواناکانی بکات لە کۆمپانیا و نووسینگە و فرۆشگاکان. " },
     { time: 14, text: "بەتەواوەتی فێری Visual Basic ئەکرێیت، فێری Excel بەتەواوەتی ئەکرێیت وە فێری MySQLیش ئەکرێیت کە بازاڕی کار هەمووی پێویستی پێیەتی" },
-    { time: 23, text: "لە سفرەوە بۆ سەد فێری هەموو شتێک دەکرێیت بەبێ کەم و کوڕی و بە بەرزترین ئاستی سەردەمییانە. " },
+    { time: 23, text: "لە سەفرەوە بۆ سەد فێری هەموو شتێک دەکرێیت بەبێ کەم و کوڕی و بە بەرزترین ئاستی سەردەمییانە. " },
     { time: 30, text: " 🎓 ئەو سیستەمانە دروست دەکەین کە خودی خۆم بۆ کۆمپانییا و شەریکات و موحاسب و HR و نووسینگە و فرۆشگا و دوکانەکانم دروست کردووە. " },
-    { time: 38.5, text: "وە شتانێکت فێر دەکەین کە ڕۆژێک لە ڕۆژان بیرت نەکربێتەوە کە ئاستت بگاتە ئەو ئاستە بەرزەی داواکاری کۆمپانیاکان وەربگریت و سیستەمیان بۆ دروست بکەیت بە ئاستێکی تەواو و پڕۆفێشناڵ. " },
-    { time: 49, text: "چونکە ئەم کۆرسە لە سفرەوە بۆ سەد فێر دەکرێیت و هیچمان جێ نەهێشتووە تۆ بتوانی پرسیار بکەیت و گلەیی بکەیت. " },
-    { time: 55.5, text: "کۆرسەکە ئاستی باڵایە و تەنانەت فێری ئەوەشت دەکەین کە چۆن سیستەم بکەیت بە ئۆنلاین و یاخوود چۆن بە ئۆفلاین چەند کۆمپیوتەرێک پێکەوە ببەستیتەوە و داتایان لەگەڵ یەکتردا بێت. وە چەندین کەس بەکاری بهێنێت لەسەر چەند کۆمپیوتەرێکی جیاواز.  " },
+    { time: 38.5, text: "وە شتانەکت فێر دەکەین کە ڕۆژێک لە ڕۆژان بیرت نەکربێتەوە کە ئاستت بگاتە ئەو ئاستە بەرزەی داواکاری کۆمپانییاکان وەربگریت و سیستەمیان بۆ دروست بکەیت بە ئاستێکی تەواو و پڕۆفێشناڵ. " },
+    { time: 49, text: "چونکە ئەم کۆرسە لە سەفرەوە بۆ سەد فێر دەکرێیت و هیچمان جێ نەهێشتووە تۆ بتوانی پرسیار بکەیت و گلەیی بکەیت. " },
+    { time: 55.5, text: "کۆرسەکە ئاستی باڵایە و تەنانەت فێری ئەوەشت دەکەین کە چۆن سیستەم بکەیت بە ئۆنلاین و یاخوود چۆن بە ئۆفلاین چەند کۆمپیوتەرێک پێکەوە ببەستیتەوە و داتایان لەگەڵ یەکتردا بێت. وە چەندین کەس بەکاری بهێنیت لەسەر چەند کۆمپیوتەرێکی جیاواز.  " },
     { time: 71, text: "وەک مارکێتەکان کە چەند کۆمپیوتەرێکی كاشێری لەسەر یەك داتا ئیش دەکەن و داتایان دەچێت بۆ یەکتری.  " },
     { time: 77, text: "وە هەر شەریکاتێک بزانێ ئەم توانایانەت هەیە، دڵنیابە دەسبەردارت نابێت.  " },
     { time: 82, text: "ئەم کۆرسە ڤیدیۆی تۆمارکراوە لە گروپی Telegram دانراون. بە پێی مەجالی خۆت دەتوانی سەیری وانەکان بکەیت.  " },
-    { time: 89, text: "هەر سیستەمێک لە گروپێکی تایبەت بە خۆی دا دانراوە بۆ ئەوەی تێکەڵاوبوون ڕوو نەدات و بە ئاسانی بتوانی هەر سیستەمێک دروست بکەیتەوە بەبێ قەرەباڵغی  " },
+    { time: 89, text: "هەر سیستەمێک لە گروپێکی تایبەت بە خۆی دا دانراوە بۆ ئەوەی تێکەڵاوبوون ڕوو نەدات و بە ئاسانی بتوانی هەر سیستەمێک درست بکەیتەوە بەبێ قەرەباڵغی  " },
     { time: 98.5, text: " وە سەرجەم پێداویستیەکانت پێ دەدرێت و گرنگترین بەشی کۆرسەکەم ئەوەیە کە هەمیشە یارمەتی خۆمت لەگەڵدایە  " },
     { time: 105, text: " کە تووشی هەر کێشەیەک ببیت ڕاستەخۆ یارمەتیت دەدەم و بۆت چارەسەر دەکەم و پێشت ئەڵێم هەڵەکەشت لەکوێ دابووە  " },
     { time: 111, text: " بە مانای ئەوەی هیچ وانەیەک بەبێ فێربوون تێناپەڕێنی " }
@@ -182,12 +209,11 @@ if (audio) {
     audio.addEventListener('timeupdate', () => {
         if (!audio.duration) return;
 
-        // Update seekbar percentage
         const pct = (audio.currentTime / audio.duration) * 100;
         voiceSeekbar.value = pct;
-        voiceSeekbar.style.background = `linear-gradient(to left, #f97316 ${pct}%, #e2e8f0 ${pct}%)`;
+        // سێبەری ڕەساسی کاڵ بۆ کاتی لێدان
+        voiceSeekbar.style.background = `linear-gradient(to left, #ff9034 ${pct}%, #e2e8f0 ${pct}%)`;
 
-        // Format Timers
         const curMins = Math.floor(audio.currentTime / 60);
         const curSecs = Math.floor(audio.currentTime % 60);
         const durMins = Math.floor(audio.duration / 60);
@@ -198,7 +224,6 @@ if (audio) {
 
         voiceTimer.innerText = `${curFormatted} / ${durFormatted}`;
 
-        // Live Dynamic Subtitles
         const curTime = audio.currentTime;
         let activeSub = subtitlesData[0].text;
         for (let i = 0; i < subtitlesData.length; i++) {
@@ -235,6 +260,7 @@ function setLanguage(lang) {
     }
 
     document.getElementById('main-title').innerText = data.mainTitle;
+    document.getElementById('edu-section-title').innerText = data.eduTitle;
     document.getElementById('voice-label-text').innerText = data.voiceLabel;
     document.getElementById('main-subtitle').innerText = data.mainSubtitle;
     
@@ -257,6 +283,9 @@ function setLanguage(lang) {
     document.getElementById('btn-text-wa-chat').innerText = data.btnWaChat;
     document.getElementById('btn-text-wa-call').innerText = data.btnWaCall;
     document.getElementById('footer-text').innerText = data.footerText;
+
+    const badgesContainer = document.getElementById('badges-container');
+    badgesContainer.innerHTML = data.badges.map(item => `<div class="p-badge-item">${item}</div>`).join('');
 
     const arrowIcons = document.querySelectorAll('.arrow-icon');
     arrowIcons.forEach(icon => {
