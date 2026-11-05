@@ -4,12 +4,12 @@ const translations = {
         mainTitle: 'بینەر زانا خدر',
         eduTitle: 'بڕوانامە و شارەزاییەکان',
         badges: [
-            '<i class="fa-solid fa-graduation-cap"></i> دەرچووی بەڕێوەبردنی کارگێڕی',
-            '<i class="fa-solid fa-users-gear"></i> سەرچاوە مرۆییەکان (HR)',
-            '<i class="fa-solid fa-coins"></i> ژمێریاری (Accounting)',
-            '<i class="fa-solid fa-laptop-code"></i> پەرەپێدەری داتابەیس و IT',
-            '<i class="fa-solid fa-palette"></i> گرافیک دیزاینەر',
-            '<i class="fa-solid fa-language"></i> وەرگێڕ (Translator)'
+            '<i class="fa-solid fa-graduation-cap" style="color: #7c3aed; background: #f3e8ff;"></i> <span>دەرچووی بەڕێوەبردنی کارگێڕی</span>',
+            '<i class="fa-solid fa-users-gear" style="color: #9333ea; background: #fae8ff;"></i> <span>سەرچاوە مرۆییەکان (HR)</span>',
+            '<i class="fa-solid fa-coins" style="color: #d97706; background: #fef3c7;"></i> <span>ژمێریاری (Accounting)</span>',
+            '<i class="fa-solid fa-laptop-code" style="color: #0284c7; background: #e0f2fe;"></i> <span>پەرەپێدەری داتابەیس و IT</span>',
+            '<i class="fa-solid fa-palette" style="color: #db2777; background: #fce7f3;"></i> <span>گرافیک دیزاینەر</span>',
+            '<i class="fa-solid fa-language" style="color: #0d9488; background: #ccfbf1;"></i> <span>وەرگێڕ (Translator)</span>'
         ],
         voiceLabel: 'تەواوی زانیاریی کۆرسەکە',
         mainSubtitle: 'کۆرسی پرۆفێشناڵی دروستکردنی سیستەم و داتابەیس بە ئێکسڵ',
@@ -57,12 +57,12 @@ const translations = {
         mainTitle: 'بينر زانا خدر',
         eduTitle: 'التعليم والمهارات',
         badges: [
-            '<i class="fa-solid fa-graduation-cap"></i> خريج إدارة أعمال',
-            '<i class="fa-solid fa-users-gear"></i> الموارد البشرية (HR)',
-            '<i class="fa-solid fa-coins"></i> المحاسبة (Accounting)',
-            '<i class="fa-solid fa-laptop-code"></i> مطور قواعد بيانات وتقنية معلومات',
-            '<i class="fa-solid fa-palette"></i> مصمم جرافيك',
-            '<i class="fa-solid fa-language"></i> مترجم (Translator)'
+            '<i class="fa-solid fa-graduation-cap" style="color: #7c3aed; background: #f3e8ff;"></i> <span>خريج إدارة أعمال</span>',
+            '<i class="fa-solid fa-users-gear" style="color: #9333ea; background: #fae8ff;"></i> <span>الموارد البشرية (HR)</span>',
+            '<i class="fa-solid fa-coins" style="color: #d97706; background: #fef3c7;"></i> <span>المحاسبة (Accounting)</span>',
+            '<i class="fa-solid fa-laptop-code" style="color: #0284c7; background: #e0f2fe;"></i> <span>مطور قواعد بيانات وتقنية معلومات</span>',
+            '<i class="fa-solid fa-palette" style="color: #db2777; background: #fce7f3;"></i> <span>مصمم جرافيك</span>',
+            '<i class="fa-solid fa-language" style="color: #0d9488; background: #ccfbf1;"></i> <span>مترجم (Translator)</span>'
         ],
         voiceLabel: 'كافة تفاصيل الدورة التدريبية',
         mainSubtitle: 'الدورة الاحترافية لبناء الأنظمة وقواعد البيانات من الصفر حتى الاحتراف',
@@ -110,12 +110,12 @@ const translations = {
         mainTitle: 'Binar Zana Khdir',
         eduTitle: 'Education & Skills',
         badges: [
-            '<i class="fa-solid fa-graduation-cap"></i> Business Administration Graduate',
-            '<i class="fa-solid fa-users-gear"></i> Human Resources (HR)',
-            '<i class="fa-solid fa-coins"></i> Accounting',
-            '<i class="fa-solid fa-laptop-code"></i> IT & Database Systems Developer',
-            '<i class="fa-solid fa-palette"></i> Graphic Designer',
-            '<i class="fa-solid fa-language"></i> Translator'
+            '<i class="fa-solid fa-graduation-cap" style="color: #7c3aed; background: #f3e8ff;"></i> <span>Business Administration Graduate</span>',
+            '<i class="fa-solid fa-users-gear" style="color: #9333ea; background: #fae8ff;"></i> <span>Human Resources (HR)</span>',
+            '<i class="fa-solid fa-coins" style="color: #d97706; background: #fef3c7;"></i> <span>Accounting</span>',
+            '<i class="fa-solid fa-laptop-code" style="color: #0284c7; background: #e0f2fe;"></i> <span>IT & Database Systems Developer</span>',
+            '<i class="fa-solid fa-palette" style="color: #db2777; background: #fce7f3;"></i> <span>Graphic Designer</span>',
+            '<i class="fa-solid fa-language" style="color: #0d9488; background: #ccfbf1;"></i> <span>Translator</span>'
         ],
         voiceLabel: 'Full Course Information',
         mainSubtitle: 'Professional System & Database Development Course (Zero to Hero)',
@@ -160,25 +160,65 @@ const translations = {
     }
 };
 
-// --- Subtitles Timing Engine (دەقە فەرمییەکانتان بەبێ هیچ دەستکارییەک) ---
-const subtitlesData = [
-    { time: 0, text: " بەڕێزم سڵاوت لێ بێت تەندروستی بەڕێزت چۆنە؟" },
-    { time: 3, text: " لە کۆرسی ئاستی باڵای Excel دا یانزە سیستەمی داتابەیسی پێشکەوتوو و پڕۆفێشناڵ دروست دەکەین" },
-    { time: 8, text: "🚀 🎓 ئەم کۆرسە بۆ کەسێکە کە بیەوێت عەرزی تواناکانی بکات لە کۆمپانیا و نووسینگە و فرۆشگاکان. " },
-    { time: 14, text: "بەتەواوەتی فێری Visual Basic ئەکرێیت، فێری Excel بەتەواوەتی ئەکرێیت وە فێری MySQLیش ئەکرێیت کە بازاڕی کار هەمووی پێویستی پێیەتی" },
-    { time: 23, text: "لە سەفرەوە بۆ سەد فێری هەموو شتێک دەکرێیت بەبێ کەم و کوڕی و بە بەرزترین ئاستی سەردەمییانە. " },
-    { time: 30, text: " 🎓 ئەو سیستەمانە دروست دەکەین کە خودی خۆم بۆ کۆمپانییا و شەریکات و موحاسب و HR و نووسینگە و فرۆشگا و دوکانەکانم دروست کردووە. " },
-    { time: 38.5, text: "وە شتانەکت فێر دەکەین کە ڕۆژێک لە ڕۆژان بیرت نەکربێتەوە کە ئاستت بگاتە ئەو ئاستە بەرزەی داواکاری کۆمپانییاکان وەربگریت و سیستەمیان بۆ دروست بکەیت بە ئاستێکی تەواو و پڕۆفێشناڵ. " },
-    { time: 49, text: "چونکە ئەم کۆرسە لە سەفرەوە بۆ سەد فێر دەکرێیت و هیچمان جێ نەهێشتووە تۆ بتوانی پرسیار بکەیت و گلەیی بکەیت. " },
-    { time: 55.5, text: "کۆرسەکە ئاستی باڵایە و تەنانەت فێری ئەوەشت دەکەین کە چۆن سیستەم بکەیت بە ئۆنلاین و یاخوود چۆن بە ئۆفلاین چەند کۆمپیوتەرێک پێکەوە ببەستیتەوە و داتایان لەگەڵ یەکتردا بێت. وە چەندین کەس بەکاری بهێنیت لەسەر چەند کۆمپیوتەرێکی جیاواز.  " },
-    { time: 71, text: "وەک مارکێتەکان کە چەند کۆمپیوتەرێکی كاشێری لەسەر یەك داتا ئیش دەکەن و داتایان دەچێت بۆ یەکتری.  " },
-    { time: 77, text: "وە هەر شەریکاتێک بزانێ ئەم توانایانەت هەیە، دڵنیابە دەسبەردارت نابێت.  " },
-    { time: 82, text: "ئەم کۆرسە ڤیدیۆی تۆمارکراوە لە گروپی Telegram دانراون. بە پێی مەجالی خۆت دەتوانی سەیری وانەکان بکەیت.  " },
-    { time: 89, text: "هەر سیستەمێک لە گروپێکی تایبەت بە خۆی دا دانراوە بۆ ئەوەی تێکەڵاوبوون ڕوو نەدات و بە ئاسانی بتوانی هەر سیستەمێک درست بکەیتەوە بەبێ قەرەباڵغی  " },
-    { time: 98.5, text: " وە سەرجەم پێداویستیەکانت پێ دەدرێت و گرنگترین بەشی کۆرسەکەم ئەوەیە کە هەمیشە یارمەتی خۆمت لەگەڵدایە  " },
-    { time: 105, text: " کە تووشی هەر کێشەیەک ببیت ڕاستەخۆ یارمەتیت دەدەم و بۆت چارەسەر دەکەم و پێشت ئەڵێم هەڵەکەشت لەکوێ دابووە  " },
-    { time: 111, text: " بە مانای ئەوەی هیچ وانەیەک بەبێ فێربوون تێناپەڕێنی " }
-];
+// --- Subtitles Timing Engine (بە پێی زمانەکان ڕێکخراوە) ---
+const subtitlesData = {
+    ckb: [
+        { time: 0, text: " بەڕێزم سڵاوت لێ بێت تەندروستی بەڕێزت چۆنە؟" },
+        { time: 3, text: " لە کۆرسی ئاستی باڵای Excel دا یانزە سیستەمی داتابەیسی پێشکەوتوو و پڕۆفێشناڵ دروست دەکەین" },
+        { time: 8, text: "🚀 🎓 ئەم کۆرسە بۆ کەسێکە کە بیەوێت عەرزی تواناکانی بکات لە کۆمپانیا و نووسینگە و فرۆشگاکان. " },
+        { time: 14, text: "بەتەواوەتی فێری Visual Basic ئەکرێیت، فێری Excel بەتەواوەتی ئەکرێیت وە فێری MySQLیش ئەکرێیت کە بازاڕی کار هەمووی پێویستی پێیەتی" },
+        { time: 23, text: "لە سەفرەوە بۆ سەد فێری هەموو شتێک دەکرێیت بەبێ کەم و کوڕی و بە بەرزترین ئاستی سەردەمییانە. " },
+        { time: 30, text: " 🎓 ئەو سیستەمانە دروست دەکەین کە خودی خۆم بۆ کۆمپانییا و شەریکات و موحاسب و HR و نووسینگە و فرۆشگا و دوکانەکانم دروست کردووە. " },
+        { time: 38.5, text: "وە شتانەکت فێر دەکەین کە ڕۆژێک لە ڕۆژان بیرت نەکربێتەوە کە ئاستت بگاتە ئەو ئاستە بەرزەی داواکاری کۆمپانییاکان وەربگریت و سیستەمیان بۆ دروست بکەیت بە ئاستێکی تەواو و پڕۆفێشناڵ. " },
+        { time: 49, text: "چونکە ئەم کۆرسە لە سەفرەوە بۆ سەد فێر دەکرێیت و هیچمان جێ نەهێشتووە تۆ بتوانی پرسیار بکەیت و گلەیی بکەیت. " },
+        { time: 55.5, text: "کۆرسەکە ئاستی باڵایە و تەنانەت فێری ئەوەشت دەکەین کە چۆن سیستەم بکەیت بە ئۆنلاین و یاخوود چۆن بە ئۆفلاین چەند کۆمپیوتەرێک پێکەوە ببەستیتەوە و داتایان لەگەڵ یەکتردا بێت. وە چەندین کەس بەکاری بهێنیت لەسەر چەند کۆمپیوتەرێکی جیاواز.  " },
+        { time: 71, text: "وەک مارکێتەکان کە چەند کۆمپیوتەرێکی كاشێری لەسەر یەك داتا ئیش دەکەن و داتایان دەچێت بۆ یەکتری.  " },
+        { time: 77, text: "وە هەر شەریکاتێک بزانێ ئەم توانایانەت هەیە، دڵنیابە دەسبەردارت نابێت.  " },
+        { time: 82, text: "ئەم کۆرسە ڤیدیۆی تۆمارکراوە لە گروپی Telegram دانراون. بە پێی مەجالی خۆت دەتوانی سەیری وانەکان بکەیت.  " },
+        { time: 89, text: "هەر سیستەمێک لە گروپێکی تایبەت بە خۆی دا دانراوە بۆ ئەوەی تێکەڵاوبوون ڕوو نەدات و بە ئاسانی بتوانی هەر سیستەمێک درست بکەیتەوە بەبێ قەرەباڵغی  " },
+        { time: 98.5, text: " وە سەرجەم پێداویستیەکانت پێ دەدرێت و گرنگترین بەشی کۆرسەکەم ئەوەیە کە هەمیشە یارمەتی خۆمت لەگەڵدایە  " },
+        { time: 105, text: " کە تووشی هەر کێشەیەک ببیت ڕاستەخۆ یارمەتیت دەدەم و بۆت چارەسەر دەکەم و پێشت ئەڵێم هەڵەکەشت لەکوێ دابووە  " },
+        { time: 111, text: " بە مانای ئەوەی هیچ وانەیەک بەبێ فێربوون تێناپەڕێنی " }
+    ],
+    ara: [
+        { time: 0, text: "أهلاً بك يا أخي العزيز، كيف حالك وأتمنى أن تكون بأحسن صحة؟" },
+        { time: 3, text: "في دورة إكسل للمستوى المتقدم، نقوم ببناء أحد عشر نظام قواعد بيانات متطور واحترافي" },
+        { time: 8, text: "🚀 🎓 هذه الدورة مخصصة لمن يريد إبراز مهاراته وإمكانياته في الشركات والمكاتب والمحلات التجارية." },
+        { time: 14, text: "ستتعلم البرمجة بلغة Visual Basic بشكل كامل، وتتقن إكسل تماماً، بالإضافة إلى تعلم MySQL التي يحتاجها سوق العمل بقوة" },
+        { time: 23, text: "ستتعلم كل شيء من الصفر إلى الاحتراف بدون أي نقص وبأرقى المعايير الحديثة." },
+        { time: 30, text: " 🎓 سنقوم ببناء نفس الأنظمة التي صممتها بنفسي للشركات، والمؤسسات، والمحاسبين، والموارد البشرية (HR)، والمكاتب والمتاجر." },
+        { time: 38.5, text: "سنعطيك مهارات لم تتخيل يوماً أن تصل إليها، لكي تتمكن من تلبية طلبات الشركات الكبرى وبناء أنظمة متكاملة واحترافية لهم." },
+        { time: 49, text: "لأن هذه الدورة تبحر معك من الصفر للاحتراف ولم نترك أي شين ناقص، فلن يكون لديك أي مجال للأسئلة أو الاعتراض." },
+        { time: 55.5, text: "الدورة بمستوى متقدم جداً؛ بل نعلمك أيضاً كيف ترفع النظام أونلاين، أو كيف تربط عدة حواسيب معاً أوفلاين لتعمل على قاعدة بيانات واحدة مشتركة ليستخدمها عدة أشخاص على أجهزة مختلفة." },
+        { time: 71, text: "تماماُ مثل الأسواق المركزية (الماركتات) التي تعمل فيها عدة حواسيب كاشير على قاعدة بيانات واحدة ومترابطة." },
+        { time: 77, text: "وأي شركة تدرك أنك تمتلك هذه المهارات، كن على يقين أنها لن تستغني عنك أبداً." },
+        { time: 82, text: "هذه الدورة عبارة عن فيديوهات مسجلة ومرفوعة في مجموعات تليجرام، ويمكنك مشاهدة الدروس وفقاً لوقت فراغك ومجالك." },
+        { time: 89, text: "كل نظام مخصص له مجموعة مستقلة بذاتها لكي لا يحدث أي اختلاط، ولكي تستطيع بسهولة بناء أي نظام بدون أي إزعاج أو ازدحام." },
+        { time: 98.5, text: " سيتم تزويدك بكافة المتطلبات، والجزء الأهم في دورتي هو أن مساعدتي الشخصية مستمرة معك دائماً." },
+        { time: 105, text: "حيثما تواجهك أي مشكلة سأقوم بمساعدتك مباشرة وحلها لك، وأوضح لك أين كان موضع خطئك." },
+        { time: 111, text: "بمعنى أنك لن تجتاز أي درس على الإطلاق بدون أن تستوعبه وتتعلمه حقاً." }
+    ],
+    eng: [
+        { time: 0, text: "Hello my friend, how are you? I hope you are doing well." },
+        { time: 3, text: "In this Advanced Excel Level Course, we build 11 advanced and professional database systems." },
+        { time: 8, text: "🚀 🎓 This course is designed for anyone who wants to showcase their skills in companies, offices, and stores." },
+        { time: 14, text: "You will learn Visual Basic completely, master Excel thoroughly, and also learn MySQL, which the job market heavily demands." },
+        { time: 23, text: "You will be taught everything from scratch to 100%, without any flaws and at the highest modern standards." },
+        { time: 30, text: " 🎓 We build the exact systems that I personally created for companies, corporations, accountants, HR, offices, stores, and shops." },
+        { time: 38.5, text: "We will teach you things you never imagined you could achieve—allowing you to meet company demands and build fully professional systems for them." },
+        { time: 49, text: "Because this course teaches you from zero to hero, leaving nothing out, you will have no room for questions or complaints." },
+        { time: 55.5, text: "This is an advanced-level course; we even teach you how to put your system online, or how to network multiple computers offline so they share the same database, allowing multiple people to use it across different computers." },
+        { time: 71, text: "Just like supermarkets where multiple cashier computers operate on a single shared database." },
+        { time: 77, text: "And any company that realizes you have these skills will definitely never want to let you go." },
+        { time: 82, text: "This course consists of pre-recorded videos hosted in Telegram groups. You can watch the lessons according to your own schedule and free time." },
+        { time: 89, text: "Each system has its own dedicated group to prevent any confusion, allowing you to easily rebuild any system without clutter." },
+        { time: 98.5, text: "You will be provided with all necessary requirements, and the best part of my course is that my personal support is always with you." },
+        { time: 105, text: "Whenever you run into any issue, I will directly help you, solve it for you, and explain where you made the mistake." },
+        { time: 111, text: "Meaning that you will never pass any lesson without truly learning it." }
+    ]
+};
+
+let currentLang = 'ckb';
 
 const audio = document.getElementById('courseAudio');
 const playBtnIcon = document.getElementById('playBtnIcon');
@@ -211,7 +251,6 @@ if (audio) {
 
         const pct = (audio.currentTime / audio.duration) * 100;
         voiceSeekbar.value = pct;
-        // سێبەری ڕەساسی کاڵ بۆ کاتی لێدان
         voiceSeekbar.style.background = `linear-gradient(to left, #ff9034 ${pct}%, #e2e8f0 ${pct}%)`;
 
         const curMins = Math.floor(audio.currentTime / 60);
@@ -225,10 +264,12 @@ if (audio) {
         voiceTimer.innerText = `${curFormatted} / ${durFormatted}`;
 
         const curTime = audio.currentTime;
-        let activeSub = subtitlesData[0].text;
-        for (let i = 0; i < subtitlesData.length; i++) {
-            if (curTime >= subtitlesData[i].time) {
-                activeSub = subtitlesData[i].text;
+        const activeSubData = subtitlesData[currentLang];
+        let activeSub = activeSubData[0].text;
+        
+        for (let i = 0; i < activeSubData.length; i++) {
+            if (curTime >= activeSubData[i].time) {
+                activeSub = activeSubData[i].text;
             }
         }
         if (aiSubtitleText.innerText !== activeSub) {
@@ -240,11 +281,14 @@ if (audio) {
         playBtnIcon.className = 'fas fa-play';
         voiceItem.classList.remove('playing');
         voiceSeekbar.value = 0;
-        aiSubtitleText.innerText = "دەستپێبکە بۆ بیستنی زانیارییەکان...";
+        aiSubtitleText.innerText = (currentLang === 'eng') ? "Play to listen to information..." : 
+                                   (currentLang === 'ara') ? "اضغط للتشغيل والاستماع إلى المعلومات..." : 
+                                   "دەستپێبکە بۆ بیستنی زانیارییەکان...";
     });
 }
 
 function setLanguage(lang) {
+    currentLang = lang;
     const data = translations[lang];
     
     document.documentElement.setAttribute('dir', data.dir);
@@ -301,14 +345,17 @@ function setLanguage(lang) {
 
     const learnContainer = document.getElementById('learn-list');
     learnContainer.innerHTML = data.learn.map(item => `<div class="grid-item">${item}</div>`).join('');
+
+    if (aiSubtitleText) {
+        aiSubtitleText.innerText = (lang === 'eng') ? "Play to listen to information..." : 
+                                   (lang === 'ara') ? "اضغط للتشغيل والاستماع إلى المعلومات..." : 
+                                   "دەستپێبکە بۆ بیستنی زانیارییەکان...";
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     setLanguage('ckb');
 });
-
-
-
 
 /* 🌟 تەڵخبونی سەرەتایی (Initial Blur) و ڕوونبوونەوەی هێمن لەگەڵ سکرۆڵ بۆ سەرەوە */
 window.addEventListener('load', () => {
