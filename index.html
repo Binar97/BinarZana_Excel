@@ -9,8 +9,9 @@
     <link rel="icon" type="image/x-icon" href="Images/Binar.ico">
     
     <!-- Font Awesome Icons & DevIcons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,7 +54,46 @@
                 </div>
             </div>
 
-            <p class="subtitle" id="main-subtitle">کۆرسی پرۆفێشناڵی دروستکردنی سیستەم و داتابەیس لەسفرەوە بۆ سەد</p>
+            <!-- 🌟 Voice Player Element (دواخرا بۆ ڕاستەوخۆ خوار لۆگۆکان) 🌟 -->
+            <div class="voice-card-wrapper">
+                <div class="voice-item">
+                    <div class="voice-header-row">
+                        <div class="voice-title-box">
+                            <i class="fas fa-microphone" id="voiceIcon"></i>
+                            <span class="label" id="voice-label-text">تەواوی زانیاریی کۆرسەکە</span>
+                        </div>
+                        <span class="voice-timer" id="voiceTimer">00:00 / 00:00</span>
+                    </div>
+
+                    <div class="voice-main-controls">
+                        <button class="voice-play-btn" onclick="toggleVoice()" type="button">
+                            <i class="fas fa-play" id="playBtnIcon"></i>
+                        </button>
+
+                        <div class="timeline-container">
+                            <input type="range" id="voiceSeekbar" class="voice-seekbar" value="0" min="0" max="100" step="0.1" oninput="seekVoice(this.value)">
+                        </div>
+                    </div>
+
+                    <!-- Dynamic AI Subtitle Display -->
+                    <div class="ai-caption-box">
+                        <i class="fas fa-sparkles ai-icon"></i>
+                        <p id="aiSubtitleText">دەستپێبکە بۆ بیستنی زانیارییەکان...</p>
+                    </div>
+
+                    <div class="voice-wave-container" id="voiceWave">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    
+                    <audio id="courseAudio" src="Audio/Voice Test.mp3" preload="metadata"></audio>
+                </div>
+            </div>
+
+            <p class="subtitle" id="main-subtitle">کۆرسی پرۆفێشناڵی دروستکردنی سیستەم و داتابەیس بە ئێکسڵ</p>
 
             <div class="tech-tags">
                 <span class="tag"><i class="fa-solid fa-code"></i> VBA Excel</span>
@@ -71,7 +111,7 @@
             <div class="offer-header">
                 <div class="offer-title-group">
                     <h2 id="offer-main-title">کۆرسی ئاستی باڵای ئێکسڵ</h2>
-                    <p id="offer-main-sub">وەکو ڕاهێنانی بەهاکەی پێشکەش دەکرێت بە شیوازی پڕۆفێشناڵ و کردارەکی</p>
+                    <p id="offer-main-sub">ئەم کۆرسە بۆ کەسێكە کە بیەوێت خۆی پڕۆفشناڵ بکات و عرضی تواناکانی بکات لە کۆمپانیا و شەریکاتەکان</p>
                 </div>
                 <div class="offer-icon">
                     <i class="fa-solid fa-graduation-cap"></i>
@@ -103,12 +143,12 @@
                 <i class="fa-solid fa-graduation-cap"></i>
             </div>
             <div class="card-content">
-                <div class="card-title" id="course-link-title">بەشی بینینی سیستەمەکان</div>
-                <div class="card-subtitle" id="course-link-sub">لەم بەشەدا زانیاری زیاتر و سیستەمەکان دەبینی</div>
+                <div class="card-title" id="course-link-title">بەشی سیستەمەکان</div>
+                <div class="card-subtitle" id="course-link-sub">بینینی ئەو سیستەمانەی کە دروستیان دەکەیت</div>
             </div>
             <div class="card-btn btn-light-red">
                 <i class="fa-solid fa-arrow-left arrow-icon"></i>
-                <span id="btn-text-1">کلیک لێرە بکە</span>
+                <span id="btn-text-1">بچۆ ژوورەوە</span>
             </div>
         </a>
 
@@ -118,16 +158,7 @@
                 <i class="fa-solid fa-users"></i>
                 <span id="sec-suitable-title">گونجاوە بۆ:</span>
             </div>
-            <div class="grid-list" id="suitable-list">
-                <div class="grid-item"><i class="fa-solid fa-building-columns"></i> کارمەندی بانک</div>
-                <div class="grid-item"><i class="fa-solid fa-building"></i> کارمەندی کۆمپانیا</div>
-                <div class="grid-item"><i class="fa-solid fa-house-user"></i> کارمەندی عەقارات</div>
-                <div class="grid-item"><i class="fa-solid fa-helmet-safety"></i> بەڵێندەرایەتی</div>
-                <div class="grid-item"><i class="fa-solid fa-cart-shopping"></i> کارمەندی فرۆشگا</div>
-                <div class="grid-item"><i class="fa-solid fa-boxes-packing"></i> ڕێکخەری کۆگا</div>
-                <div class="grid-item"><i class="fa-solid fa-calculator"></i> ژمێریار (Accountant)</div>
-                <div class="grid-item"><i class="fa-solid fa-user-tie"></i> بەڕێوەبەری HR</div>
-            </div>
+            <div class="grid-list" id="suitable-list"></div>
         </div>
 
         <!-- What You Will Learn -->
@@ -136,16 +167,7 @@
                 <i class="fa-solid fa-bullseye"></i>
                 <span id="sec-learn-title">لە ناو کۆرسەکەدا فێردەبیت:</span>
             </div>
-            <div class="grid-list" id="learn-list">
-                <div class="grid-item"><i class="fa-solid fa-check-circle"></i> VBA لە ئاستی پڕۆفشناڵ</div>
-                <div class="grid-item"><i class="fa-solid fa-check-circle"></i> دروستکردنی Database</div>
-                <div class="grid-item"><i class="fa-solid fa-check-circle"></i> MySQL Workbench</div>
-                <div class="grid-item"><i class="fa-solid fa-check-circle"></i> C# .NET Development</div>
-                <div class="grid-item"><i class="fa-solid fa-check-circle"></i> UserForm ـە پڕۆفشناڵەکان</div>
-                <div class="grid-item"><i class="fa-solid fa-check-circle"></i> Login System</div>
-                <div class="grid-item"><i class="fa-solid fa-check-circle"></i> Backup & Restore Data</div>
-                <div class="grid-item"><i class="fa-solid fa-check-circle"></i> چاپکردنی Report & Invoice</div>
-            </div>
+            <div class="grid-list" id="learn-list"></div>
         </div>
 
         <!-- Course Detail Highlight Box -->
@@ -158,7 +180,7 @@
         <div class="animate-up delay-5">
             <div class="section-title">
                 <i class="fa-solid fa-headset"></i>
-                <span id="sec-contact-title">پەیوەندی بە بەڕێوەبەرەوە:</span>
+                <span id="sec-contact-title">پەیوەندی بە ئێمەوە:</span>
             </div>
             
             <!-- Telegram -->
@@ -200,8 +222,8 @@
 
         <!-- Footer -->
         <div class="footer animate-up delay-5">
-            <div id="footer-text">Created for Professional Excel & Database Training 2026 ©</div>
-            <div dir="ltr">0771 971 3098</div>
+            <div id="footer-text">© ئامادەین بۆ دروستکردنی هەمان شێوازی پلاتفۆڕم بۆ کارەکانت</div>
+            <div dir="ltr">0771 971 3098  -  بینەر زانا خدر</div>
         </div>
 
     </div>
