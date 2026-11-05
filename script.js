@@ -324,7 +324,7 @@ window.addEventListener('load', () => {
 
     // دەستبەجێ دەچێتە خوارەوە بۆ سەر بەشی ئۆفەر
     window.scrollTo({
-        top: 450,
+        top: 650,
         behavior: 'instant'
     });
 
