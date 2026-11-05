@@ -219,7 +219,166 @@ body {
     line-height: 1.5;
     padding: 0 10px;
 }
-/*#121526*/
+
+/* 🎙️ Voice Player Section Design (پاشبنەمای کرێم لەگەڵ ڕەنگی سوور) */
+.voice-card-wrapper {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.voice-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+    background: #ffffff;
+    border: 1.5px solid var(--card-border);
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(128, 0, 0, 0.05);
+    color: var(--text-dark);
+}
+
+.voice-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.voice-title-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-red);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.voice-timer {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-family: monospace;
+}
+
+.voice-main-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.voice-play-btn {
+    background: var(--primary-red);
+    border: none;
+    color: #ffffff;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(128, 0, 0, 0.25);
+    flex-shrink: 0;
+}
+
+.voice-play-btn:hover {
+    background: var(--primary-red-hover);
+    transform: scale(1.05);
+}
+
+.voice-item.playing .voice-play-btn {
+    background: #c0392b;
+    box-shadow: 0 0 12px rgba(192, 57, 43, 0.5);
+}
+
+.timeline-container {
+    width: 100%;
+    direction: rtl;
+}
+
+.voice-seekbar {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background: #f4e8e1;
+    outline: none;
+    cursor: pointer;
+}
+
+.voice-seekbar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--primary-red);
+    box-shadow: 0 0 6px rgba(128, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+/* AI Subtitle Display Box */
+.ai-caption-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #fffaf6;
+    border: 1px dashed var(--primary-red);
+    border-radius: 12px;
+    padding: 8px 12px;
+    min-height: 42px;
+}
+
+.ai-icon {
+    color: var(--primary-red);
+    font-size: 0.85rem;
+}
+
+#aiSubtitleText {
+    font-size: 0.83rem;
+    color: var(--text-dark);
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+/* 🌊 ئیکوالیزەری زۆر جوانی شەپۆلدار (Wave Equalizer) */
+.voice-wave-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    height: 16px;
+    margin-top: 2px;
+}
+
+.voice-wave-container .bar {
+    width: 4px;
+    height: 30%;
+    background: #f0cfc3;
+    border-radius: 4px;
+    transition: height 0.2s ease;
+}
+
+.voice-item.playing .bar {
+    background: var(--primary-red);
+    box-shadow: 0 0 6px rgba(128, 0, 0, 0.3);
+    animation: waveBounce 1.2s infinite ease-in-out alternate;
+}
+
+.voice-item.playing .bar:nth-child(1) { animation-delay: 0.1s; }
+.voice-item.playing .bar:nth-child(2) { animation-delay: 0.3s; }
+.voice-item.playing .bar:nth-child(3) { animation-delay: 0.5s; }
+.voice-item.playing .bar:nth-child(4) { animation-delay: 0.2s; }
+.voice-item.playing .bar:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes waveBounce {
+    0% { height: 20%; }
+    50% { height: 100%; }
+    100% { height: 35%; }
+}
+
 /* Offer Card Box Design */
 .offer-card {
     position: relative;
@@ -568,3 +727,8 @@ body {
     flex-direction: column;
     gap: 4px;
 }
+
+
+
+
+
