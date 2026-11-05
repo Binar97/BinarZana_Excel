@@ -178,62 +178,150 @@ body {
 
 /* ئەمەی خوارەوە بۆ دیزاینی  خوێندن گرافیک و شتە */
 
-/* 🌟 Profile Badges / Education & Skills Box 🌟 */
-./* 🌟 Profile Badges / Education & Skills Box (بە ڕەنگە تایبەتەکانی ئایکۆنەکان) 🌟 */
+/* 🌟 Modern 3D Education & Skills Cards (دیزاینی نوێی 3D بۆ شارەزاییەکان) 🌟 */
 .profile-badges-box {
     width: 100%;
-    background: #ffffff;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 250, 246, 0.9));
     border: 1.5px solid var(--card-border);
-    border-radius: 18px;
-    padding: 12px 14px;
-    margin: 4px 0;
-    box-shadow: 0 4px 12px rgba(128, 0, 0, 0.04);
+    border-radius: 20px;
+    padding: 16px;
+    margin: 8px 0;
+    box-shadow: 0 8px 25px rgba(128, 0, 0, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
 }
 
 .badge-row-title {
-    font-size: 0.85rem;
-    font-weight: 700;
+    font-size: 0.9rem;
+    font-weight: 800;
     color: var(--primary-red);
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     text-align: start;
-    border-bottom: 1px dashed var(--card-border);
-    padding-bottom: 4px;
+    border-bottom: 2px dashed var(--card-border);
+    padding-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.badge-row-title::before {
+    content: '✨';
 }
 
 .profile-badges-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    gap: 10px;
 }
 
+/* کارتەکانی 3D کە کاتێک ماوس دەچێتە سەریان دێنە پێشەوە */
 .p-badge-item {
-    background: #fffaf6;
-    border: 1px solid var(--card-border);
+    background: #ffffff;
+    border: 1px solid rgba(254, 227, 216, 0.8);
+    border-radius: 14px;
+    padding: 10px 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-dark);
+    text-align: start;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.p-badge-item:hover {
+    transform: translateY(-4px) scale(1.02);
+    border-color: var(--primary-red);
+    box-shadow: 0 8px 20px rgba(128, 0, 0, 0.12);
+}
+
+/* بەشی ئایکۆنە ڤێکتۆرییە 3D یەکان */
+.p-badge-item i {
+    font-size: 1.25rem;
+    padding: 8px;
     border-radius: 10px;
-    padding: 7px 10px;
-    font-size: 0.78rem;
-    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+/* 🎨 ڕەنگ و باکگراوندی تایبەت و سەرنجڕاکێش بۆ هەر ئایکۆنێک */
+.p-badge-item:nth-child(1) i { color: #5b3e98; background: #f3e8ff; } /* Graduation Cap - مۆر */
+.p-badge-item:nth-child(2) i { color: #683685; background: #fae8ff; } /* HR Users - مۆری تۆخ */
+.p-badge-item:nth-child(3) i { color: #d97706; background: #fef3c7; } /* Accounting Money - زێڕین */
+.p-badge-item:nth-child(4) i { color: #0284c7; background: #e0f2fe; } /* IT Laptop - شینی کاڵ */
+.p-badge-item:nth-child(5) i { color: #db2777; background: #fce7f3; } /* Designer Palette - پەمەیی */
+.p-badge-item:nth-child(6) i { color: #0d9488; background: #ccfbf1; } /* Translator Globe - سەوزی کاڵ/شین */
+
+/* کورتکردنەوەی دەق و نیشاندانی تەنها لە یەک دێڕدا بێ چوونە سەر دێڕی نوێ */
+/* 🌟 دیزاینی 3D بۆ کارتەکان لەگەڵ جووڵە و گڵۆپی بەردەوامی بۆردەر و گونجانی دەق لەسەر چەند دێڕێک */
+.p-badge-item {
+    position: relative;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 10px 12px;
+    font-size: 0.76rem;
+    font-weight: 700;
     display: flex;
     align-items: center;
     gap: 8px;
     color: var(--text-dark);
     text-align: start;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    z-index: 1;
+    transition: transform 0.3s ease;
+    
+    /* ڕێگەدان بە دەق کە بێتە سەر دێڕی نوێ بەبێ بڕین */
+    white-space: normal;
+    word-break: break-word;
 }
 
+/* دروستکردنی لێواری جووڵاو و گڵۆپی ڕەنگاوڕەنگ بە دەوری کارتەکەدا بێ ئەوەی ماوست پێویست بێت */
+.p-badge-item::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, #7c3aed, #db2777, #0284c7, #d97706, #7c3aed);
+    background-size: 400%;
+    z-index: -1;
+    border-radius: 16px;
+    animation: borderGlowRotate 4s linear infinite;
+}
+
+/* پاشبنەمای ناوەوەی کارتەکە بۆ ئەوەی سپی و خاوێن بمێنێتەوە */
+.p-badge-item::after {
+    content: '';
+    position: absolute;
+    inset: 1.5px;
+    background: #ffffff;
+    border-radius: 13px;
+    z-index: -1;
+}
+
+/* ئەنیمەیشنی سووڕانەوەی گڵۆپ و ڕەنگەکان لەسەر بۆردەرەکە */
+@keyframes borderGlowRotate {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* کاتێک ماوس دەچێتە سەریان کەمێک بەرز دەبنەوە */
 .p-badge-item:hover {
-    border-color: var(--primary-red);
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.02);
 }
 
-/* 🎨 ڕەنگە تایبەتەکانی هەر ئایکۆنێک وەک وێنەکە */
-.p-badge-item:nth-child(1) i { color: #5b3e98; } /* Graduation Cap - مۆر */
-.p-badge-item:nth-child(2) i { color: #683685; } /* HR Users - مۆری تۆخ */
-.p-badge-item:nth-child(3) i { color: #e6a100; } /* Accounting Money - زێڕین */
-.p-badge-item:nth-child(4) i { color: #00b4d8; } /* IT Laptop - شینی کاڵ */
-.p-badge-item:nth-child(5) i { color: #ff6b81; } /* Designer Palette - پەمەیی */
-.p-badge-item:nth-child(6) i { color: #0096c7; } /* Translator Globe - شین */
-
+/* دڵنیابوون لەوەی ناوەوەی span و divـەکانیش دەقەکەیان بە جوانی دابەش دەبێت */
+.p-badge-item span, .p-badge-item div {
+    white-space: normal;
+    word-break: break-word;
+}
 /* //============================================================ئەمەی سەرەوە بۆ خوێندنە */
+
 
 
 
