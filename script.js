@@ -2,6 +2,7 @@ const translations = {
     ckb: {
         dir: 'rtl',
         mainTitle: 'بینەر زانا خدر',
+        voiceLabel: 'تەواوی زانیاریی کۆرسەکە',
         mainSubtitle: 'کۆرسی پرۆفێشناڵی دروستکردنی سیستەم و داتابەیس بە ئێکسڵ',
         offerBadge: '⚡ ئۆفەری کاتی',
         offerTitle: 'کۆرسی ئاستی باڵای ئێکسڵ',
@@ -40,11 +41,12 @@ const translations = {
         waSub: 'واتسئاپ (نامە و پەیوەندی)',
         btnWaChat: 'نامە',
         btnWaCall: 'پەیوەندی',
-        footerText: '© ئامادەین بۆ دروستکردنی هەمان شێوازی پلاتفۆڕم بۆ کارەکانت '
+        footerText: '© ئامادەین بۆ دروستکردنی هەمان شێوازی پلاتفۆڕم بۆ کارەکانت'
     },
     ara: {
         dir: 'rtl',
         mainTitle: 'بينر زانا خدر',
+        voiceLabel: 'كافة تفاصيل الدورة التدريبية',
         mainSubtitle: 'الدورة الاحترافية لبناء الأنظمة وقواعد البيانات من الصفر حتى الاحتراف',
         offerBadge: '⚡ عرض لفترة محدودة',
         offerTitle: 'دورة إكسل المستوى المتقدم',
@@ -88,6 +90,7 @@ const translations = {
     eng: {
         dir: 'ltr',
         mainTitle: 'Binar Zana Khdir',
+        voiceLabel: 'Full Course Information',
         mainSubtitle: 'Professional System & Database Development Course (Zero to Hero)',
         offerBadge: '⚡ Limited Time Offer',
         offerTitle: 'Advanced Level Excel Course',
@@ -130,14 +133,98 @@ const translations = {
     }
 };
 
+// --- Subtitles Timing Engine ---
+const subtitlesData = [
+    { time: 0, text: " بەڕێزم سڵاوت لێ بێت تەندروستی بەڕێزت چۆنە؟" },
+    { time: 3, text: " لە کۆرسی ئاستی باڵای Excel دا یانزە سیستەمی داتابەیسی پێشکەوتوو و پڕۆفێشناڵ دروست دەکەین" },
+    { time: 8, text: "🚀 🎓 ئەم کۆرسە بۆ کەسێکە کە بیەوێت عەرزی تواناکانی بکات لە کۆمپانیا و نووسینگە و فرۆشگاکان. " },
+    { time: 14, text: "بەتەواوەتی فێری Visual Basic ئەکرێیت، فێری Excel بەتەواوەتی ئەکرێیت وە فێری MySQLیش ئەکرێیت کە بازاڕی کار هەمووی پێویستی پێیەتی" },
+    { time: 23, text: "لە سفرەوە بۆ سەد فێری هەموو شتێک دەکرێیت بەبێ کەم و کوڕی و بە بەرزترین ئاستی سەردەمییانە. " },
+    { time: 30, text: " 🎓 ئەو سیستەمانە دروست دەکەین کە خودی خۆم بۆ کۆمپانییا و شەریکات و موحاسب و HR و نووسینگە و فرۆشگا و دوکانەکانم دروست کردووە. " },
+    { time: 38.5, text: "وە شتانێکت فێر دەکەین کە ڕۆژێک لە ڕۆژان بیرت نەکربێتەوە کە ئاستت بگاتە ئەو ئاستە بەرزەی داواکاری کۆمپانیاکان وەربگریت و سیستەمیان بۆ دروست بکەیت بە ئاستێکی تەواو و پڕۆفێشناڵ. " },
+    { time: 49, text: "چونکە ئەم کۆرسە لە سفرەوە بۆ سەد فێر دەکرێیت و هیچمان جێ نەهێشتووە تۆ بتوانی پرسیار بکەیت و گلەیی بکەیت. " },
+    { time: 55.5, text: "کۆرسەکە ئاستی باڵایە و تەنانەت فێری ئەوەشت دەکەین کە چۆن سیستەم بکەیت بە ئۆنلاین و یاخوود چۆن بە ئۆفلاین چەند کۆمپیوتەرێک پێکەوە ببەستیتەوە و داتایان لەگەڵ یەکتردا بێت. وە چەندین کەس بەکاری بهێنێت لەسەر چەند کۆمپیوتەرێکی جیاواز.  " },
+    { time: 71, text: "وەک مارکێتەکان کە چەند کۆمپیوتەرێکی كاشێری لەسەر یەك داتا ئیش دەکەن و داتایان دەچێت بۆ یەکتری.  " },
+    { time: 77, text: "وە هەر شەریکاتێک بزانێ ئەم توانایانەت هەیە، دڵنیابە دەسبەردارت نابێت.  " },
+    { time: 82, text: "ئەم کۆرسە ڤیدیۆی تۆمارکراوە لە گروپی Telegram دانراون. بە پێی مەجالی خۆت دەتوانی سەیری وانەکان بکەیت.  " },
+    { time: 89, text: "هەر سیستەمێک لە گروپێکی تایبەت بە خۆی دا دانراوە بۆ ئەوەی تێکەڵاوبوون ڕوو نەدات و بە ئاسانی بتوانی هەر سیستەمێک دروست بکەیتەوە بەبێ قەرەباڵغی  " },
+    { time: 98.5, text: " وە سەرجەم پێداویستیەکانت پێ دەدرێت و گرنگترین بەشی کۆرسەکەم ئەوەیە کە هەمیشە یارمەتی خۆمت لەگەڵدایە  " },
+    { time: 105, text: " کە تووشی هەر کێشەیەک ببیت ڕاستەخۆ یارمەتیت دەدەم و بۆت چارەسەر دەکەم و پێشت ئەڵێم هەڵەکەشت لەکوێ دابووە  " },
+    { time: 111, text: " بە مانای ئەوەی هیچ وانەیەک بەبێ فێربوون تێناپەڕێنی " }
+];
+
+const audio = document.getElementById('courseAudio');
+const playBtnIcon = document.getElementById('playBtnIcon');
+const voiceSeekbar = document.getElementById('voiceSeekbar');
+const voiceTimer = document.getElementById('voiceTimer');
+const aiSubtitleText = document.getElementById('aiSubtitleText');
+const voiceItem = document.querySelector('.voice-item');
+
+function toggleVoice() {
+    if (audio.paused) {
+        audio.play();
+        playBtnIcon.className = 'fas fa-pause';
+        voiceItem.classList.add('playing');
+    } else {
+        audio.pause();
+        playBtnIcon.className = 'fas fa-play';
+        voiceItem.classList.remove('playing');
+    }
+}
+
+function seekVoice(val) {
+    if (audio.duration) {
+        audio.currentTime = (val / 100) * audio.duration;
+    }
+}
+
+if (audio) {
+    audio.addEventListener('timeupdate', () => {
+        if (!audio.duration) return;
+
+        // Update seekbar percentage
+        const pct = (audio.currentTime / audio.duration) * 100;
+        voiceSeekbar.value = pct;
+        voiceSeekbar.style.background = `linear-gradient(to left, #f97316 ${pct}%, #e2e8f0 ${pct}%)`;
+
+        // Format Timers
+        const curMins = Math.floor(audio.currentTime / 60);
+        const curSecs = Math.floor(audio.currentTime % 60);
+        const durMins = Math.floor(audio.duration / 60);
+        const durSecs = Math.floor(audio.duration % 60);
+
+        const curFormatted = `${curMins < 10 ? '0' : ''}${curMins}:${curSecs < 10 ? '0' : ''}${curSecs}`;
+        const durFormatted = `${durMins < 10 ? '0' : ''}${durMins}:${durSecs < 10 ? '0' : ''}${durSecs}`;
+
+        voiceTimer.innerText = `${curFormatted} / ${durFormatted}`;
+
+        // Live Dynamic Subtitles
+        const curTime = audio.currentTime;
+        let activeSub = subtitlesData[0].text;
+        for (let i = 0; i < subtitlesData.length; i++) {
+            if (curTime >= subtitlesData[i].time) {
+                activeSub = subtitlesData[i].text;
+            }
+        }
+        if (aiSubtitleText.innerText !== activeSub) {
+            aiSubtitleText.innerText = activeSub;
+        }
+    });
+
+    audio.addEventListener('ended', () => {
+        playBtnIcon.className = 'fas fa-play';
+        voiceItem.classList.remove('playing');
+        voiceSeekbar.value = 0;
+        aiSubtitleText.innerText = "دەستپێبکە بۆ بیستنی زانیارییەکان...";
+    });
+}
+
 function setLanguage(lang) {
     const data = translations[lang];
     
-    // Set Document Direction
     document.documentElement.setAttribute('dir', data.dir);
     document.documentElement.setAttribute('lang', lang);
 
-    // Active button state & dynamic color changes
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.className = 'lang-btn';
     });
@@ -147,11 +234,10 @@ function setLanguage(lang) {
         activeBtn.classList.add(`active-${lang}`);
     }
 
-    // Text Updates
     document.getElementById('main-title').innerText = data.mainTitle;
+    document.getElementById('voice-label-text').innerText = data.voiceLabel;
     document.getElementById('main-subtitle').innerText = data.mainSubtitle;
     
-    // Offer texts
     document.getElementById('offer-badge-text').innerText = data.offerBadge;
     document.getElementById('offer-main-title').innerText = data.offerTitle;
     document.getElementById('offer-main-sub').innerText = data.offerSub;
@@ -172,7 +258,6 @@ function setLanguage(lang) {
     document.getElementById('btn-text-wa-call').innerText = data.btnWaCall;
     document.getElementById('footer-text').innerText = data.footerText;
 
-    // Arrow direction handling
     const arrowIcons = document.querySelectorAll('.arrow-icon');
     arrowIcons.forEach(icon => {
         if (data.dir === 'ltr') {
@@ -182,7 +267,6 @@ function setLanguage(lang) {
         }
     });
 
-    // List Updates
     const suitableContainer = document.getElementById('suitable-list');
     suitableContainer.innerHTML = data.suitable.map(item => `<div class="grid-item">${item}</div>`).join('');
 
@@ -190,7 +274,6 @@ function setLanguage(lang) {
     learnContainer.innerHTML = data.learn.map(item => `<div class="grid-item">${item}</div>`).join('');
 }
 
-// Initial call
 document.addEventListener('DOMContentLoaded', () => {
     setLanguage('ckb');
 });
