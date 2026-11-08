@@ -348,7 +348,89 @@ body {
 
 /* ئەمەی سەرەوە بۆ  تایپ کردنەکەیە */
 
+/* Language Selector Bar */
+.lang-bar {
+    background: #f4e8e1;
+    padding: 6px 8px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    gap: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    overflow-x: auto;
+    white-space: nowrap;
+}
 
+.lang-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.lang-bar i {
+    color: var(--text-muted);
+    margin: 0 6px;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+/* دیزاینی گشتی بۆ هەموو دوگمەکان (شێوەی قاڵب یان باکگراوندی سووری زۆر کاڵ لەگەڵ بۆردەری نەرم) */
+.lang-btn {
+    border: 1px solid rgba(128, 0, 0, 0.18); /* بۆردەری سووری زۆر کاڵ */
+    background: rgba(128, 0, 0, 0.04); /* باکگراوندی سووری هێندە کاڵ و جوان */
+    padding: 5px 10px;
+    border-radius: 16px; /* شێوەی کپسوولی نەرم و بچووک */
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 1;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background: rgba(128, 0, 0, 0.09);
+    border-color: rgba(128, 0, 0, 0.3);
+}
+
+/* ڕەنگی چالاک (Active) بۆ هەر زمانێک کاتێک هەڵدەبژێردرێت */
+.lang-btn.active-ckb {
+    background-color: #800000 !important;
+    border-color: #800000 !important;
+    color: #ffffff;
+    box-shadow: 0 3px 8px rgba(128, 0, 0, 0.3);
+}
+
+.lang-btn.active-bah {
+    background-color: #0284c7 !important;
+    border-color: #0284c7 !important;
+    color: #ffffff;
+    box-shadow: 0 3px 8px rgba(2, 132, 199, 0.3);
+}
+
+.lang-btn.active-ara {
+    background-color: #0d6e53 !important;
+    border-color: #0d6e53 !important;
+    color: #ffffff;
+    box-shadow: 0 3px 8px rgba(13, 110, 83, 0.3);
+}
+
+.lang-btn.active-fa {
+    background-color: #d97706 !important;
+    border-color: #d97706 !important;
+    color: #ffffff;
+    box-shadow: 0 3px 8px rgba(217, 119, 6, 0.3);
+}
+
+.lang-btn.active-eng {
+    background-color: #1d3557 !important;
+    border-color: #1d3557 !important;
+    color: #ffffff;
+    box-shadow: 0 3px 8px rgba(29, 53, 87, 0.3);
+}
 /* ئەمەی خوارەوە بۆ دیزاینی  خوێندن گرافیک و شتە */
 
 /* 🌟 Modern 3D Education & Skills Cards (دیزاینی نوێی 3D بۆ شارەزاییەکان) 🌟 */
