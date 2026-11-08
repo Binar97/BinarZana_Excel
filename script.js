@@ -50,7 +50,18 @@ const translations = {
         waSub: 'واتسئاپ (نامە و پەیوەندی)',
         btnWaChat: 'نامە',
         btnWaCall: 'پەیوەندی',
-        footerText: '© ئامادەین بۆ دروستکردنی هەمان شێوازی پلاتفۆڕم بۆ کارەکانت'
+        footerText: '© ئامادەین بۆ دروستکردنی هەمان شێوازی پلاتفۆڕم بۆ کارەکانت',
+        systemsTitle: 'خەریتەی ڕێگەی دەستپێکردن (سیستەمەکان)',
+        systemsSub: '🔹 کلیک بکە بۆ بینینی نەخشەی تەواوی خولەکە',
+        branch1Title: 'ڕێگەی یەکەم: (Relations)',
+        branch2Title: 'ڕێگەی دووەم: سیستەمەکان',
+        systemsList: [
+            'سیستەمی ژمێریاری پارە هاتن و ڕۆیشتن',
+            'سیستەمی دەفتەر قەرز و مەسروفات',
+            'سیستەمی کاشێری',
+            'سیستەمی بەس عددی کۆگا',
+            'سیستەمی کڕین و فرۆشتن و قەرز و مەسروفات'
+        ]
     },
     bah: {
         dir: 'rtl',
@@ -103,7 +114,18 @@ const translations = {
         waSub: 'واتسئاپ (پەیام و پەیوەندی)',
         btnWaChat: 'پەیام',
         btnWaCall: 'پەیوەندی',
-        footerText: '© ئەم ئامادەین بۆ دروستکرنا هەمان شێوازێ پلاتفۆرمێ بۆ کارێن تە'
+        footerText: '© ئەم ئامادەین بۆ دروستکرنا هەمان شێوازێ پلاتفۆرمێ بۆ کارێن تە',
+        systemsTitle: 'نەخشەیا رێکا دەستپێکرنێ (سیستەم)',
+        systemsSub: '🔹 کلیک بکە بۆ دیتنا نەخشەیا تەمامیا خولێ',
+        branch1Title: 'رێکا ئێکێ: (Relations)',
+        branch2Title: 'رێکا دووێ: سیستەم',
+        systemsList: [
+            'سیستەمێ ژمێریاریا پارە هاتن و چوونێ',
+            'سیستەمێ دەفتەرا قەرز و خەرجیان',
+            'سیستەمێ کاشێری',
+            'سیستەمێ ب تنێ ژمارەیا کۆگایێ',
+            'سیستەمێ کڕین و فرۆتن و قەرز و خەرجیان'
+        ]
     },
     ara: {
         dir: 'rtl',
@@ -156,7 +178,18 @@ const translations = {
         waSub: 'واتساب (رسائل واتصال)',
         btnWaChat: 'رسالة',
         btnWaCall: 'اتصال',
-        footerText: 'أنشئ التدريب الاحترافي لإكسل وقواعد البيانات 2026 ©'
+        footerText: 'أنشئ التدريب الاحترافي لإكسل وقواعد البيانات 2026 ©',
+        systemsTitle: 'خريطة طريق البداية (الأنظمة)',
+        systemsSub: '🔹 انقر لعرض الخريطة الكاملة للدورة',
+        branch1Title: 'المسار الأول: (Relations)',
+        branch2Title: 'المسار الثاني: الأنظمة',
+        systemsList: [
+            'نظام محاسبة الوارد والصادر',
+            'نظام دفتر الديون والمصروفات',
+            'نظام الكاشير',
+            'نظام جرد المخزن بالكمية فقط',
+            'نظام المشتريات والمبيعات والديون والمصروفات'
+        ]
     },
     fa: {
         dir: 'rtl',
@@ -209,7 +242,18 @@ const translations = {
         waSub: 'واتساپ (پیام و تماس)',
         btnWaChat: 'پیام',
         btnWaCall: 'تماس',
-        footerText: '© آماده طراحی پلتفرم‌های مشابه برای کسب‌وکار شما'
+        footerText: '© آماده طراحی پلتفرم‌های مشابه برای کسب‌وکار شما',
+        systemsTitle: 'نقشه راه شروع (سیستم‌ها)',
+        systemsSub: '🔹 برای مشاهده نقشه کامل دوره کلیک کنید',
+        branch1Title: 'مسیر اول: (Relations)',
+        branch2Title: 'مسیر دوم: سیستم‌ها',
+        systemsList: [
+            'سیستم حسابداری دریافت و پرداخت',
+            'سیستم دفتر بدهی و هزینه‌ها',
+            'سیستم صندوق (کاشر)',
+            'سیستم انبارداری (فقط تعداد)',
+            'سیستم خرید و فروش، بدهی و هزینه‌ها'
+        ]
     },
     eng: {
         dir: 'ltr',
@@ -262,7 +306,18 @@ const translations = {
         waSub: 'WhatsApp (Chat & Call)',
         btnWaChat: 'Chat',
         btnWaCall: 'Call',
-        footerText: 'Created for Professional Excel & Database Training 2026 ©'
+        footerText: 'Created for Professional Excel & Database Training 2026 ©',
+        systemsTitle: 'Getting Started Roadmap (Systems)',
+        systemsSub: '🔹 Click to view the full course roadmap',
+        branch1Title: 'Path 1: (Relations)',
+        branch2Title: 'Path 2: Systems',
+        systemsList: [
+            'Cash In & Out Accounting System',
+            'Debt & Expenses Ledger System',
+            'Cashier (POS) System',
+            'Warehouse Quantity-Only System',
+            'Purchase, Sales, Debt & Expenses System'
+        ]
     }
 };
 
@@ -471,6 +526,15 @@ function setLanguage(lang) {
     document.getElementById('btn-text-wa-call').innerText = data.btnWaCall;
     document.getElementById('footer-text').innerText = data.footerText;
 
+    // بەشی خەریتەی ڕێگە (Roadmap)
+    document.getElementById('sec-systems-title').innerText = data.systemsTitle;
+    document.getElementById('systems-sub-txt').innerText = data.systemsSub;
+    document.getElementById('branch1-title').innerText = data.branch1Title;
+    document.getElementById('branch2-title').innerText = data.branch2Title;
+    document.querySelectorAll('#systems-list .chip-txt').forEach((el, i) => {
+        if (data.systemsList[i]) el.innerText = data.systemsList[i];
+    });
+
     const badgesContainer = document.getElementById('badges-container');
     badgesContainer.innerHTML = data.badges.map(item => `<div class="p-badge-item">${item}</div>`).join('');
 
@@ -592,4 +656,11 @@ function runTypewriter() {
     }
 
     twTimeout = setTimeout(runTypewriter, speed);
+}
+
+function toggleSystemsDropdown() {
+    const wrapper = document.getElementById('systemsWrapper');
+    if (wrapper) {
+        wrapper.classList.toggle('open');
+    }
 }
