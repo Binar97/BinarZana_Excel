@@ -1411,5 +1411,42 @@ body {
     font-weight: 800;
     flex-shrink: 0;
 }
+/* هەردوو ڕێگەکە هەمیشە لەتەنیشت یەک بن (تەنانەت لە مۆبایل) */
+.branches-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
 
+.branch-col {
+    min-width: 0; /* ڕێگە نادات دەقی درێژ ستوونەکە بەرفراوان بکات */
+}
+
+@media (max-width: 600px) {
+    .systems-dropdown-content {
+        padding: 16px 8px;
+    }
+
+    .branch-col {
+        padding: 8px 6px;
+    }
+
+    .branch-header {
+        font-size: 0.68rem;
+        gap: 4px;
+    }
+
+    .chip-item {
+        font-size: 0.62rem;
+        padding: 5px 5px;
+        gap: 4px;
+        line-height: 1.4;
+        word-break: break-word;
+    }
+
+    .chip-num {
+        width: 17px;
+        height: 17px;
+        font-size: 0.55rem;
+    }
+}
 
